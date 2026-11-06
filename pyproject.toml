@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autohtmlvideo"
+version = "0.1.0"
+description = "Automated AI news short-video pipeline for collect/review/build workflows."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "beautifulsoup4>=4.12",
+  "deep-translator>=1.11.4",
+  "edge-tts>=7.2.3",
+  "feedparser>=6.0.11",
+  "httpx>=0.27",
+  "imageio-ffmpeg>=0.6.0",
+  "jinja2>=3.1",
+  "playwright>=1.58.0",
+  "pydantic>=2.0",
+]
+
+[project.scripts]
+autohtmlvideo = "autohtmlvideo.cli:main"
+
+[tool.setuptools]
+packages = ["autohtmlvideo"]
+
